@@ -1,16 +1,10 @@
 import java.nio.file.Paths
 
-def filenamesEnding(query: String) = {
-  namesMatching(_.endsWith(query))
-}
+def filenamesEnding(query: String) = namesMatching(_.endsWith(query))
 
-def filenamesStarting(query: String) = {
-  namesMatching(_.startsWith(query))
-}
+def filenamesStarting(query: String) = namesMatching(_.startsWith(query))
 
-def filenamesContaining(query: String) = {
-  filnames().filter(_.contains(query))
-}
+def filenamesContaining(query: String) = filnames filter (_.contains(query))
 
 
 private def filnames() = Paths.get("/home/arehus").toFile.list

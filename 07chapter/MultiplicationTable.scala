@@ -15,3 +15,4 @@ val formattedTable: String = {
 }
 
 println(formattedTable)
+
